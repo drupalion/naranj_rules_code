@@ -1,5 +1,4 @@
 <?php
-
 function reduce_design_office_quota_create_project($node) {
   $area = $node->field_text19_1_value['und'][0]['value'];
   $target_id = $node->og_group_ref2['und'][0]['target_id'];
@@ -10,6 +9,7 @@ function reduce_design_office_quota_create_project($node) {
     node_save($design_office);
   }
 }
+
 
 function reduce_design_office_quota_edit_project($node, $node_unchanged) {
   $old_area = $node_unchanged->field_text19_1_value['und'][0]['value'];
@@ -29,7 +29,7 @@ function reduce_design_office_quota_edit_project($node, $node_unchanged) {
     }
   }
 }
-// map event
+//__________________________________ map event
 function reduce_design_office_quota($event, $node, $node_unchanged) {
   //event can be 'create' or 'edit'
   $municipility_status = $node->field_municipility_status['und'][0]['value'];
@@ -56,7 +56,7 @@ function reduce_design_office_quota($event, $node, $node_unchanged) {
     node_save($design_office);
   }
 }
-//map event
+//__________________________________________map event
 function set_structure_group($node, $unchanged_node) {
 
   $municipility_status = $node->field_municipility_status['und'][0]['value'];
