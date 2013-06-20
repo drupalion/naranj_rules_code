@@ -13,11 +13,8 @@ function reduce_design_office_quota_create_project($node) {
 
 function reduce_design_office_quota_edit_project($node, $node_unchanged) {
   $old_area = $node_unchanged->field_text19_1_value['und'][0]['value'];
-  drupal_set_message('eeeeeeeeee');
   $area = $node->field_text19_1_value['und'][0]['value'];
-//  dpm($area,'area');
   if ($old_area != $area) {
-//    dpm('ddddddddddd');
     $target_id = $node->og_group_ref2['und'][0]['target_id'];
     
     if (isset($target_id)) {
